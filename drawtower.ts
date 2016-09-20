@@ -12,7 +12,7 @@ function drawtower(n:number){
             spc = spc + "";
         }
         for(e=0 ; e<(2*q+1) ; e++){   //*号
-            sta = sta + "*";
+            sta = sta + "*"; 
         }
         end = spc + sta;
         console.log(end);
