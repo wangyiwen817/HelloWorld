@@ -11,7 +11,7 @@ function drawtower(n:number){
         for(w=0 ; w<(n-q-1) ; w++){   //空格
             spc = spc + "";
         }
-        for(e=0 ; e<(q*2+1) ; e++){   //*号
+        for(e=0 ; e<(2*q+1) ; e++){   //*号
             sta = sta + "*";
         }
         end = spc + sta;
@@ -19,5 +19,5 @@ function drawtower(n:number){
     }
 }
 
-var x:string = process.arg(2);
+var x:string = process.argv[2];
 drawtower(parseInt(x));
