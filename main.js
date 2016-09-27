@@ -1,22 +1,19 @@
-/*function print(a:number):number{
-    return a = 5;
-}*/
-function drawtower(n) {
-    var q, w, e;
-    var spc, sta, end; //spc:space,sta:start,end:end
-    for (q = 0; q < n; q++) {
-        spc = "";
-        sta = "";
-        end = "";
-        for (w = 0; w < (n - q - 1); w++) {
-            spc = spc + "";
+function DrawPyramid(totalrows) {
+    var currentRow, spaceCount, starCount;
+    var spacestr, starstr, finalstr;
+    for (currentRow = 0; currentRow < totalrows; currentRow++) {
+        spacestr = "";
+        starstr = "";
+        finalstr = "";
+        for (spaceCount = 0; spaceCount < (totalrows - currentRow - 1); spaceCount++) {
+            spacestr = spacestr + " "; //空格
         }
-        for (e = 0; e < (2 * q + 1); e++) {
-            sta = sta + "*";
+        for (starCount = 0; starCount < (2 * currentRow + 1); starCount++) {
+            starstr = starstr + "*"; //*号
         }
-        end = spc + sta;
-        console.log(end);
+        finalstr = spacestr + starstr;
+        console.log(finalstr); //两串组合输出
     }
 }
-var x = process.argv[2];
-drawtower(parseInt(x));
+var rows = process.argv[2];
+DrawPyramid(parseInt(rows));
