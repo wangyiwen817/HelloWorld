@@ -9,4 +9,4 @@ function Draw(n:number):void
         console.log(str);
     }
 }
-Draw(5);
+Draw(8);

@@ -8,4 +8,4 @@ function Draw(n) {
         console.log(str);
     }
 }
-Draw(5);
+Draw(8);
